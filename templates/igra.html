@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Игра</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/igra.css">
 </head>
 <body>
     <h1>Угадайте рандомное число</h1>
@@ -16,6 +16,7 @@
     </form>
 
     {{if .Message}}
+    <h2>{{.Result}}</h2>
         <p>{{.Message}}</p>
     {{end}}
 </body>
