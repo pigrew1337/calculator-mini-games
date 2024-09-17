@@ -13,11 +13,15 @@
         <input type="number" id="number" name="number" required>
         <br><br>
         <button type="submit">Проверить</button>
-    </form>
+    
 
     {{if .Message}}
-    <h2>{{.Result}}</h2>
-        <p>{{.Message}}</p>
+        <p class="result">{{.Message}}</p>
     {{end}}
+</form>
+    <footer>
+        <p>{{.FottersTextа}}{{.Result}}</p>
+        <p><a href="/">переход обратно</a></p>
+    </footer>
 </body>
 </html>

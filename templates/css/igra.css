@@ -36,15 +36,6 @@ label {
     display: block;
 }
 
-input[type="text"], select {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
 button {
     width: 100%;
     padding: 10px;
@@ -56,16 +47,30 @@ button {
     cursor: pointer;
 }
 
-footer {
-    text-align: center;
-    background-color: white;
-    position: fixed;
-    width: 5%;
-    bottom: 20px;
-    left: 50%; 
-    transform: translateX(-50%);
-    
+input {
+    position: absolute;
+
 }
+
+footer {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #5e5ecc;
+    position: fixed;
+    width: 100%;
+    bottom: 20px;  
+}
+
+p.result {
+    color: #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
 
 
 button:hover {
@@ -75,10 +80,6 @@ button:hover {
 h2 {
     text-align: center;
     background-color: #ffffff; 
-}
-
-h2[style="color: red;"] {
-    color: red;
 }
 
 h2.result {

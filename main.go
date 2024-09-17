@@ -93,6 +93,7 @@ func igra(w http.ResponseWriter, r *http.Request) {
 		userInput, err := strconv.Atoi(userInputStr)
 		var message string
 		var result string
+		var fottersText string
 
 		if err != nil {
 			message = "Введите корректное число"
@@ -103,15 +104,18 @@ func igra(w http.ResponseWriter, r *http.Request) {
 		} else {
 			message = "Поздравляем! Вы угадали число! "
 			result = strconv.Itoa(randomNumber)
+			fottersText = "И ЭТО ЧИСЛО ПРИДУМАЛ ДМИТРИЙ УТКИН "
 			initRandomNumber()
 		}
 
 		data := struct {
-			Message string
-			Result  string
+			Message      string
+			Result       string
+			FottersTextа string
 		}{
-			Message: message,
-			Result:  result,
+			Message:      message,
+			Result:       result,
+			FottersTextа: fottersText,
 		}
 		tmpl.Execute(w, data)
 		return
