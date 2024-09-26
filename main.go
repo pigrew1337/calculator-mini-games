@@ -24,11 +24,17 @@ func main() {
 	fs := http.FileServer(http.Dir("templates/css"))
 	// работаем
 	http.Handle("/css/", http.StripPrefix("/css/", fs))
-	http.HandleFunc("/", calculate)
+	http.HandleFunc("/", regist)
+	http.HandleFunc("/calculate", calculate)
 	http.HandleFunc("/igra", igra)
 
 	fmt.Println("Сервер запущен, порт 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func regist(w http.ResponseWriter, r *http.Request) {
+	tmpl := template.Must(template.ParseFiles("templates/regist.html"))
+	tmpl.Execute(w, nil)
 }
 
 func calculate(w http.ResponseWriter, r *http.Request) {
