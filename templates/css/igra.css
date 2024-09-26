@@ -87,3 +87,22 @@ h2.result {
     font-size: 20px;
     margin-top: 20px;
 }
+
+a.calculate {
+    width: auto;
+    border-radius: 5px;
+    background-color: #cebbfa;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+button.calculate {
+    width: auto;
+    border-radius: 5px;
+    background-color: #cebbfa;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 25px; 
+}
