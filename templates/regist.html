@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/regist.css">
 </head>
 <body>
     <h1>регистрация</h1>
     <form method="POST" action="/">
-        <p><a href="/calculate">войти без регистрации</a></p>
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="password">Пароль</label>
+        <input type="text" id="password" name="password" required>
+        <br><br>
+        <button type="submit">войти</button>
+        <br><br>
+        <button type="submit">зарегистрироваться</button>
     </form>
+    <footer>
+        <a href="/calculate" class="regist">войти без регистрации</a>
+    </footer>
 </body>
 </html>
