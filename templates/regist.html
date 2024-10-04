@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <link rel="stylesheet" href="/css/regist.css">
+    <title>Форма регистрации и входа</title>
+    <link rel="stylesheet" href="css/regist.css">
 </head>
 <body>
-    <h1>Тест на отправку данных в базу</h1>
-    <form method="POST" action="/">
-        <label for="name">Имя</label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
-        <label for="password">Пароль</label>
-        <input type="text" id="password" name="password" required>
-        <br><br>
-        <button type="submit">добавить</button>
-    </form>
+    <div class="form-container">
+        <h2>Регистрация</h2>
+        <form action="register.php" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+    <div class="form-container">
+        <h2>Вход</h2>
+        <form action="login.php" method="POST">
+            <label for="login_name">Имя:</label>
+            <input type="text" id="login_name" name="login_name" required>
+
+            <label for="login_password">Пароль:</label>
+            <input type="password" id="login_password" name="login_password" required>
+
+            <button type="submit">Войти</button>
+        </form>
+    </div>
     <footer>
-        <button type="submit"><a href="/calculate" class="regist">войти без регистрации</a></button>
+        <a href="/calculate">cscsc</a>
     </footer>
 </body>
 </html>

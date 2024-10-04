@@ -1,69 +1,83 @@
-form {
-    background-color: #f4f4f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 15;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #e1e1e7;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.form-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 label {
-    font-size: 16px;
-    margin-bottom: 10px;
     display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: bold;
 }
 
 input[type="text"] {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
-h1 {
-    z-index: 10;
-    position: center; 
-    top: 20px; 
-    text-align: center;
-    font-family: Arial, sans-serif;
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+input[type="password"] {
+    outline: none;
 }
 
 button {
-    background-color: rgb(45, 167, 85);
+    width: 100%;
     padding: 10px;
-    border-radius: 12px;
+    background-color: #007bff;
     border: none;
-    font-size: 23px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #036bda;
 }
 
 footer {
-    border: none;
     text-align: center;
     position: fixed;
     width: 5%;
     bottom: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-a.regist {
-    border: none;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    color: rgb(27, 27, 27);
+    left: 50%; 
+    transform: translateX(-50%);
 }
