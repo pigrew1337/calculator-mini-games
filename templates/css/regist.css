@@ -76,14 +76,19 @@ button:hover {
 footer {
     text-align: center;
     position: fixed;
-    width: 5%;
     bottom: 20px;
     left: 50%; 
     transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+
+    border-radius: 5px;
 }
 
 a{
     font-family: Arial, sans-serif;
-    outline: none;
-    color: #000000;
+    color: #e4e4e4;
+    border-radius: 5px;
+    font-size: 17px;
+    text-decoration: none;
 }
+

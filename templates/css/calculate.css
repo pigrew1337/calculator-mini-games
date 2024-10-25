@@ -97,13 +97,6 @@ a.igra {
     text-decoration: none;
 }
 
-a.regist {
-    border-radius: 5px;
-    background-color: #cebbfa;
-    font-size: 25px;
-    text-decoration: none;
-}
-
 button.igra {
     width: auto;
     border-radius: 5px;
@@ -111,4 +104,19 @@ button.igra {
     display: inline-block;
     white-space: nowrap;
     font-size: 25px; 
+}
+
+button.regist {
+    width: auto;
+    border-radius: 5px;
+    background-color: #cebbfa;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+a.regist {
+    border-radius: 5px;
+    background-color: #cebbfa;
+    font-size: 25px;
+    text-decoration: none;
 }
