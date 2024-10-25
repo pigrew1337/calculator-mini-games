@@ -81,3 +81,9 @@ footer {
     left: 50%; 
     transform: translateX(-50%);
 }
+
+a{
+    font-family: Arial, sans-serif;
+    outline: none;
+    color: #000000;
+}
