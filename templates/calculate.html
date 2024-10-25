@@ -7,36 +7,40 @@
     <link rel="stylesheet" href="/css/calculate.css">
 </head>
 <body>
-    <button class ="regist"><a href="/" class="regist">регистрация</a></button>
-    <form method="POST" action="/calculate">
-        <h1>Калькулятор</h1>
-        <label for="number1">Число 1:</label>
-        <input type="text" id="number1" name="number1" required>
-        <br><br>
+    <header>
+        <a href="/" class="regist">Регистрация</a>
+    </header>
+    <main>
+        <form method="POST" action="/calculate">
+            <h1>Калькулятор</h1>
+            <label for="number1">Число 1:</label>
+            <input type="text" id="number1" name="number1" required>
+            <br><br>
 
-        <label for="number2">Число 2:</label>
-        <input type="text" id="number2" name="number2" required>
-        <br><br>
+            <label for="number2">Число 2:</label>
+            <input type="text" id="number2" name="number2" required>
+            <br><br>
 
-        <label for="operation">Операция:</label>
-        <select name="operation" id="operation">
-            <option value="+">Сложение</option>
-            <option value="-">Вычитание</option>
-            <option value="*">Умножение</option>
-            <option value="^">Возведение в степень</option>
-            <option value="/">Деление</option>
-        </select>
-        <br><br>
+            <label for="operation">Операция:</label>
+            <select name="operation" id="operation">
+                <option value="+">Сложение</option>
+                <option value="-">Вычитание</option>
+                <option value="*">Умножение</option>
+                <option value="^">Возведение в степень</option>
+                <option value="/">Деление</option>
+            </select>
+            <br><br>
 
-        <button type="submit">Вычислить</button>
-        {{if .Error}}
-        <h2 style="color: red;">{{.Error}}</h2>
-        {{else if .Result}}
-        <h2 class="result">Результат: {{.Number1}} {{if eq .Operation "+"}} + {{else if eq .Operation "-"}} - {{else if eq .Operation "*"}} * {{else if eq .Operation "^"}} ^ {{else if eq .Operation "/"}} / {{end}} {{.Number2}} = {{.Result}}</h2>
-        {{end}}
-    </form>
+            <button type="submit">Вычислить</button>
+            {{if .Error}}
+            <h2 class="error">{{.Error}}</h2>
+            {{else if .Result}}
+            <h2 class="result">Результат: {{.Number1}} {{if eq .Operation "+"}} + {{else if eq .Operation "-"}} - {{else if eq .Operation "*"}} * {{else if eq .Operation "^"}} ^ {{else if eq .Operation "/"}} / {{end}} {{.Number2}} = {{.Result}}</h2>
+            {{end}}
+        </form>
+    </main>
     <footer>
-        <button class="igra"><a href="/igra" class="igra">Угадай число</a></button>
+        <a href="/igra" class="igra">Угадай число</a>
     </footer>
 </body>
 </html>
